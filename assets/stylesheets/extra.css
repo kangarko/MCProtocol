@@ -1,0 +1,31 @@
+/* https://dev.to/rashidshamloo/preventing-the-layout-shift-caused-by-scrollbars-2flp */ 
+html {
+  scrollbar-gutter: stable;
+}
+
+/* Hide Go To Repository next to search and Edit Source and site title */
+.md-header__source, .md-content__button, .md-header__topic {
+    display: none !important;
+}
+
+.md-search__form {
+    border-radius: 5px;
+}
+
+/* Space out left panel menu items */ 
+.md-header__inner {
+    padding: 0.15rem 0.2rem !important;
+}
+.md-nav__container .md-nav__link {
+    padding: 5px 0 !important;
+    transition: 200ms;
+}
+
+.md-header {
+    background: url("../branding/background-village-dark.webp") no-repeat center !important;
+    background-size: cover !important;
+}
+
+.md-tabs {
+    background: rgba(20, 21, 26, 1) !important;
+}
