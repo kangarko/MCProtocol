@@ -9,7 +9,7 @@ hide:
 
 # :material-home: MCProtocol
 
-(Add description)
+ A new era wiki.vg protocol docs.
 
 ## Versions
 
