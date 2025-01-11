@@ -1,0 +1,8 @@
+mkdocs-material
+mkdocs-autorefs
+mkdocs-glightbox
+mkdocstrings-python
+mkdocs-git-revision-date-localized-plugin
+mkdocs-pdf
+mkdocs-open-in-new-tab
+mkdocs-git-committers-plugin-2

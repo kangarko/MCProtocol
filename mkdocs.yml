@@ -1,0 +1,142 @@
+site_name: MCProtocol
+repo_name: MCProtocol
+repo_url: https://github.com/kangarko/mcprotocol
+extra_css:
+  - assets/stylesheets/extra.css
+theme:
+  name: material
+  logo: assets/branding/header-white.png
+  favicon: assets/branding/logo-white.png
+  font:
+    code: JetBrains Mono
+  icon:
+    repo: fontawesome/brands/github
+    edit: material/pencil
+    view: material/eye
+    admonition:
+      note: octicons/tag-16
+      abstract: octicons/checklist-16
+      info: octicons/info-16
+      tip: octicons/squirrel-16
+      success: octicons/check-16
+      question: octicons/question-16
+      warning: octicons/alert-16
+      failure: octicons/x-circle-16
+      danger: octicons/zap-16
+      bug: octicons/bug-16
+      example: octicons/beaker-16
+      quote: octicons/quote-16
+  palette:
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/link
+        name: Auto mode
+
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: octicons/sun-16
+        name: Light mode
+
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: black
+      accent: indigo
+      toggle:
+        icon: octicons/moon-24
+        name: Dark mode
+
+  features:
+    - content.tabs.link
+    - search.highlight
+    - search.suggest
+    - content.code.copy
+    - content.code.select
+    - navigation.tabs
+    - navigation.instant
+    - navigation.instant.progress
+    - navigation.indexes
+    - navigation.footer
+    - navigation.top
+    - content.action.view
+    - content.action.edit
+    - content.tooltips
+    - toc.follow
+
+nav:
+  - Home: index.md
+
+plugins:
+  - autorefs
+  - search
+  - privacy
+  - open-in-new-tab
+  - glightbox:
+      touchNavigation: true
+      loop: false
+      effect: zoom
+      slide_effect: slide
+      width: 100%
+      height: auto
+      zoomable: true
+      draggable: true
+      auto_caption: false
+      caption_position: bottom
+      skip_classes:
+        - no-lightbox
+  - git-revision-date-localized:
+      fallback_to_build_date: true
+      exclude:
+        - index.md
+  - git-committers:
+      repository: kangarko/mcprotocol
+      branch: main
+      exclude:
+        - index.md
+
+extra:
+  social:
+    - icon: fontawesome/solid/house
+      link: https://mineacademy.org
+    - icon: fontawesome/brands/discord
+      link: https://mineacademy.org/discord
+    - icon: fontawesome/brands/youtube
+      link: https://www.youtube.com/@kangarko
+
+markdown_extensions:
+  - admonition
+  - abbr
+  - footnotes
+  - pymdownx.details
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - toc:
+      permalink: "#"
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.tabbed:
+      alternate_style: true
+      combine_header_slug: true
+      slugify: !!python/object/apply:pymdownx.slugs.slugify
+        kwds:
+          case: lower
+  - def_list
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - attr_list
+  - md_in_html
+  - tables
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+
+copyright: © ???
